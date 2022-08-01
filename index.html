@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container mt-5 col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Registration Form</h3>
+        </div>
+        <div class="card-body">
+          <form class="row" method="post" id="form">
+            <div class="col-md-6 mb-3">
+              <input
+                type="firstname"
+                class="form-control"
+                placeholder="Surname"
+                name="surname"
+                required
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <input
+                type="firstname"
+                class="form-control"
+                placeholder="Firstname"
+                name="firstname"
+                required
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <input
+                type="lastname"
+                class="form-control"
+                placeholder=" Other Names"
+                name="othernames"
+                required
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="School"
+                name="school"
+                required
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Class"
+                name="class"
+                required
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Phone Number"
+                name="phone"
+              />
+            </div>
+            <div class="col-lg-6 mb-3">
+              <select
+                class="form-select form-select-md"
+                aria-label=".form-select-md example"
+                name="gender"
+                id="gender"
+              >
+                <option selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <select
+                class="form-select form-select-md"
+                aria-label=".form-select-md example"
+                name="lga"
+                id="lga"
+              >
+                <option selected>LGA</option>
+                <option value=" Akure South">Akure South</option>
+                <option value="Akure North">Akure North</option>
+              </select>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <select
+                class="form-select form-select-md"
+                aria-label=".form-select-md example"
+                name="state"
+                id="state"
+              >
+                <option selected>State</option>
+                <option value="Ondo">Ondo</option>
+                <option value="Ibadan">Ibadan</option>
+                <option value="Lagos">Lagos</option>
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input
+                type="address"
+                class="form-control"
+                placeholder="Address"
+                name="address"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="submitUser"
+              name="register"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Details</h3>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered" id="info">
+              <thead>
+                <tr>
+                  <th>Surname</th>
+                  <th>Firstname</th>
+                  <th>Othernames</th>
+                  <th>Gender</th>
+                  <th>School</th>
+                  <th>Phone</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="Modal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Users Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="row" method="post">
+              <div class="col-md-6 mb-3">
+                <input
+                  type="firstname"
+                  class="form-control"
+                  placeholder="Surname"
+                  name="surname"
+                  id="sm"
+                  readonly
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="firstname"
+                  class="form-control"
+                  placeholder="Firstname"
+                  name="firstname"
+                  id="fm"
+                  readonly
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="lastname"
+                  class="form-control"
+                  placeholder=" Other Names"
+                  name="othernames"
+                  id="om"
+                  readonly
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="School"
+                  name="school"
+                  id="sc"
+                  readonly
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Class"
+                  id="cla"
+                  name="class"
+                  readonly
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Phone Number"
+                  name="phone"
+                  id="pn"
+                  readonly
+                />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Gender"
+                  name="phone"
+                  id="gen"
+                  readonly
+                />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="LGA"
+                  name="phone"
+                  id="LGA"
+                  readonly
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="State"
+                  name="phone"
+                  id="sta"
+                  readonly
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="address"
+                  class="form-control"
+                  placeholder="Address"
+                  name="address"
+                  id="add"
+                  readonly
+                />
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-outline-secondary" data-bs-dismiss="modal" type="button">Close</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#form").on("submit", function (e) {
+          e.preventDefault();
+
+          $.ajax({
+            method: "POST",
+            url: "connection.php",
+            data: $(this).serialize(),
+          }).done(function (res) {
+            data = JSON.parse(res);
+            if (data.id) {
+              var html = '<tr id="' + data.id + '">';
+              html += "<td>" + data.surname + "</td>";
+              html += "<td>" + data.firstname + "</td>";
+              html += "<td>" + data.othername + "</td>";
+              html += "<td>" + data.gender + "</td>";
+              html += "<td>" + data.school + "</td>";
+              html += "<td>" + data.phone + "</td>";
+              html +=
+                "<td>" +
+                '<button class="btn btn-primary viewBtn">' +
+                "View" +
+                "</button>" +
+                "</td></tr>";
+              $("#info").append(html);
+              $("#form")[0].reset();
+              setTimeout(() => {
+                $("#gender,#lga,#state").val("").change();
+              }, 100);
+            }
+          });
+        });
+        $(document).on("click", ".viewBtn", function (e) {
+          e.preventDefault();
+          tr = $(this).closest("tr").attr("id");
+
+          $.ajax({
+            method: "GET",
+            url: "connection.php?info=" + tr,
+          }).done(function (res) {
+              data = JSON.parse(res)
+              $('#sm').val(data.surname); 
+              $('#fm').val(data.firstname); 
+              $('#om').val(data.othernames); 
+              $('#sc').val(data.school); 
+              $('#cla').val(data.class); 
+              $('#pn').val(data.phone); 
+              $('#gen').val(data.gender); 
+              $('#LGA').val(data.lga); 
+              $('#sta').val(data.state); 
+              $('#add').val(data.address); 
+              $('#Modal').modal('toggle');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
